@@ -1,0 +1,19 @@
+
+
+
+    char arr[100];
+    char arr2[100][100];
+    int i = 0;
+    char * token; 
+    
+	//reads until newline char
+    scanf("%[^\n]%*c", arr);
+    printf("%s\n", arr);
+        
+    //split the string into sections // 
+    token = strtok(arr, " | ");
+    while(token != NULL){
+        strcpy(*(arr2+i), token);
+        printf("%s\n", arr2 + i++);
+        token = strtok(NULL," | ");
+    }
